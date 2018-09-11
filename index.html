@@ -6,7 +6,7 @@
 
 <body>
   <div id="app">
-    {{ message }}
+    {{ message }} - <a v-bind:href="link">Google</a>
   </div>
 
   <script src="vue.js"></script>
@@ -16,7 +16,8 @@
     new Vue({
       el: '#app',
       data: {
-        message: 'Hello, Kenia'
+        message: 'Hello, Kenia',
+        link: 'http:google.com'
       }
     });
 
