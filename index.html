@@ -6,6 +6,8 @@
 
 <body>
   <div id="app">
+    <input type="text" v-model="name">
+    <p>{{ name }}</p>
     <button v-on:click="increase(2, $event)">Click me!</button>
     <p>{{ counter }}</p>
     <p v-on:mousemove="updateCoordinates">Coordinates: {{x}}/ {{y}}
@@ -20,6 +22,7 @@
     new Vue({
       el: '#app',
       data: {
+        name: 'Kenia',
         counter: 0,
         x: 0,
         y:0,
