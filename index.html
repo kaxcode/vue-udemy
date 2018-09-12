@@ -7,8 +7,8 @@
 <body>
   <div id="app">
     <ul>
-      <li v-for="person in persons">
-        <div v-for="(value, key) in person">{{ key }} : {{value}}</div>
+      <li v-for="ingredient in ingredients" :key="ingredient">
+        {{ ingredient}} {{key}}
       </li>
     </ul>
   </div>
@@ -20,10 +20,7 @@
     new Vue({
       el: '#app',
       data: {
-        persons: [
-          {name: 'kenia', age: 185375, color: 'purple'},
-          {name: 'Kristen', age: 'unknown', color: 'blue'}
-        ]
+        ingredients : ['tofu', 'red bell peppe', 'green onions']
       }
     });
 
