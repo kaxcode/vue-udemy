@@ -6,11 +6,9 @@
 
 <body>
   <div id="app">
-    <p v-if="show">Now you see me!</p>
-    <p v-show="show">Do you see me?</p>
-    <p v-else="show">Now you don't!</p>
-    <p>You always see me</p>
-    <button @click="show = !show">Switch</button>
+    <ul>
+      <li v-for="ingredient in ingredients">{{ingredient}}</li>
+    </ul>
   </div>
 
   <script src="vue.js"></script>
@@ -20,7 +18,7 @@
     new Vue({
       el: '#app',
       data: {
-        show: true,
+        ingredients: ['tofu', 'red bell pepper', 'green onions']
       }
     });
 
